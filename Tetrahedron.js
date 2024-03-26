@@ -61,7 +61,9 @@ class TetPiece {
 
     static getSizes(canvas) {
         const gridX = 4;
-        const size = canvas.width / (sqrt3 * gridX);
+        const sizeX = canvas.width / (sqrt3 * gridX);
+        const sizeY = canvas.height / (sqrt3 * gridX);
+        const size = Math.min(sizeX, sizeY);
         return {
             gridX,
             size,
